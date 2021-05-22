@@ -38,4 +38,43 @@ public class Solution {
 
 
     }
+
+
+    public static int removeDuplicates2(int[] nums) {
+        int length = nums.length;
+        // 如果数组为空 则返回0
+        if (length == 0){
+            return 0;
+        }
+        // 双指针标记法
+        int i = 1; // i指针标记下一个不重复元素
+        for (int j = 1; j < length; j++){ // j指针遍历数组，找到不重复的元素
+            // 数组中的前一个元素和当前元素 不同
+            // 则把j指针所指向的元素赋值给i指针所指向的元素
+            if (nums[j] != nums[j - 1]){
+                nums[i] = nums[j];
+                i++;
+            }
+        }
+        // 返回i指针，i指针表示数组不重复元素的索引+1 每次j指针指向元素赋给i指针时 i指针都会加1
+        return i;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
