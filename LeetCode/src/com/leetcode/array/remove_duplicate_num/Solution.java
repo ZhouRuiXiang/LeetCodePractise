@@ -5,6 +5,8 @@ package com.leetcode.array.remove_duplicate_num;
  * @date 2021/5/21 18:38
  * @Description: Remove duplicates in an ordered array
  */
+
+@SuppressWarnings("all")
 public class Solution {
     public static void main(String[] args) {
         int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
@@ -27,7 +29,7 @@ public class Solution {
         }
 
         int i = 1; // i指针表示数组下一个不重复元素的索引
-        for (int j = 1; j < nums.length; j++) { // j指针表示数组遍历的索引
+        for (int j = 1; j < length; j++) { // j指针表示数组遍历的索引
             if (nums[j] != nums[j - 1]){
                 nums[i] = nums[j];
                 i++;
