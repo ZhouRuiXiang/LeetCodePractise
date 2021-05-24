@@ -58,10 +58,10 @@ public class Solution {
     }
 
     /*
-        要求得二叉树的深度 及求二叉树的层数
+        要求得二叉树的深度 即求二叉树的层数 迭代BFS breadth-first search
      */
     public static int maxDepth(TreeNode root) {
-        // 迭代BFS
+
         if (root == null){
             return 0;
         }
@@ -75,10 +75,10 @@ public class Solution {
             while (size-- != 0){
                 TreeNode node = queue.poll(); // 每一层的节点逐个出队
                 if (node.left != null){
-                    queue.offer(node.left); //下一层的结点队尾(左子节点)
+                    queue.offer(node.left); //下一层的节点添加到队尾(左子节点)
                 }
                 if (node.right != null){
-                    queue.offer(node.right);
+                    queue.offer(node.right);// 下一层的节点添加到队尾(右子节点)
                 }
             }
             depth++;
@@ -87,7 +87,7 @@ public class Solution {
         return depth;
     }
     /*
-        递归 BFS
+        递归 DFS depth-first searh
      */
     public static int maxDepthByRecursion(TreeNode root){
         // 递归出口
