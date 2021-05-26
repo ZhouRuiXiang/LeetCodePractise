@@ -1,7 +1,5 @@
 package com.leetcode.list.add_of_two_numbers;
 
-import com.leetcode.list.reverseList.ReverseList;
-
 /**
  * @author BlueStar
  * @date 2021/5/20 8:35

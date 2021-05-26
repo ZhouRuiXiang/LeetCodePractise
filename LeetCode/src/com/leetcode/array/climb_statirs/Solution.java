@@ -13,6 +13,7 @@ public class Solution {
 
 
     public static int climbStairs(int n) {
+        // 动态规划
         // 第一层楼梯 f(1) = 1
         // 第二层楼梯 f(2) = 2
         if (n == 1){
@@ -33,7 +34,8 @@ public class Solution {
     }
 
     public static int climbStairs2(int n){
-        // 空间优化 数组 -> 滚动数组
+        // 动态规划空间优化 数组 -> 滚动数组
+        // 时间复杂度 O(n) 空间复杂度 O(1)
         if (n == 1){
             return 1;
         }

@@ -1,4 +1,4 @@
-package com.leetcode.list.reverseList;
+package com.leetcode.list.reverse_list;
 
 
 /**

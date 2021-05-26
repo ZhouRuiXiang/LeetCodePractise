@@ -1,4 +1,4 @@
-package com.leetcode.list.removeNthFromEnd;
+package com.leetcode.list.remove_Nth_from_end;
 
 /**
  * @author BlueStar

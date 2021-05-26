@@ -1,4 +1,4 @@
-package com.leetcode.sliding_window.lengthOfLongestSubstring;
+package com.leetcode.sliding_window.length_of_longest_substring;
 
 import java.util.HashMap;
 
