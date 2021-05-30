@@ -10,12 +10,49 @@ import java.util.Arrays;
 public class Solution {
 
     public static void main(String[] args) {
-        int[] nums = {2, 0, 2, 1, 1, 0};
-        sortColors(nums);
+        int[] nums = {2, 0, 2, 1, 1, 0, 1, 2, 0, 1, 0, 2};
+        sortColors2(nums);
         String s = Arrays.toString(nums);
         System.out.println(s);
     }
 
+
+    public static void sortColors2(int[] nums) {
+        // 循环不变量
+        // all in [0, p0)
+        // all in [p0, i)
+        // all in (p2, len - 1]
+
+        // 定义边界
+        if (nums.length <= 1){
+            return;
+        }
+
+        // 定义三个指针变量
+        int p0 = 0, i = 0, p2 = nums.length - 1;
+
+        while (i <= p2) {
+            if (nums[i] == 0) {
+                // 交换
+                swap(nums, i, p0);
+                i++;
+                p0++;
+            } else if (nums[i] == 1) {
+                i++;
+            } else { // nums[i] == 2
+                swap(nums, i, p2);
+                p2--;
+                // 这里i不再自增，因为从后面换回来的数不知道是几，这里继续查看这个数，如果是2还要继续swap，直到这个数不是2 i自增
+            }
+        }
+
+    }
+
+    public static void swap(int[] nums, int index1, int index2) {
+        int temp = nums[index1];
+        nums[index1] = nums[index2];
+        nums[index2] = temp;
+    }
     /*
      * 快排
      * */
