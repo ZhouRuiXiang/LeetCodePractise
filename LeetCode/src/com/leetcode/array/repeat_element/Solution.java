@@ -17,7 +17,7 @@ public class Solution {
     }
 
     public static boolean containsDuplicate(int[] nums) {
-        // time: O(n)   space: O(n)
+        // time: O(n)   space: O(n) 哈希表
         HashSet<Integer> set = new HashSet<>();
 
         for (int num : nums) {
