@@ -1,4 +1,4 @@
-package com.leetcode.greedy_algorithm.trade_stocks;
+package com.leetcode.greedy_algorithm.trade_stocksII;
 
 public class TradeStocks {
 
@@ -13,7 +13,7 @@ public class TradeStocks {
         注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
 
          */
-        int[] arr = {100 , 200 , 300, 200, 100, 50, 500};
+        int[] arr = {7 , 1 , 5, 3, 6, 4};
         int maxProfit = maxProfit(arr);
         System.out.println(maxProfit);
 
@@ -21,7 +21,6 @@ public class TradeStocks {
 
 
     // 贪心算法
-
     public static int maxProfit(int[] prices) {
         int len = prices.length;
         if (len < 2) {
