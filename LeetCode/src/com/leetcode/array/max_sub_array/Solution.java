@@ -33,8 +33,8 @@ public class Solution {
         }
         int pre = 0, maxSum = nums[0];
         for (int num : nums) {
-            pre = Math.max(num, num + pre);
-            maxSum = Math.max(maxSum, pre);
+            pre = Math.max(num, num + pre); // 当前值 compare 当前值+前一个值 大的留 小的丢弃 即要么从当前num开始 要么从 num + pre 开始
+            maxSum = Math.max(maxSum, pre); // maxSum 只保留历史最大值
 
         }
         return maxSum;
