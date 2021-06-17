@@ -17,9 +17,10 @@ public class Solution {
 
     public static void main(String[] args) {
 
-        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5, null)))));
+//        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5, null)))));
+        ListNode head = new ListNode(1, new ListNode(2, null));
 
-        ListNode newHead = reverseBetween(head, 2, 4);
+        ListNode newHead = reverseBetween(head, 1, 2);
         printList(newHead);
 
 
@@ -56,7 +57,7 @@ public class Solution {
             next.next = pre.next;
             pre.next = next;
         }
-        return head;
+        return dummyNode.next;
 
 
     }
