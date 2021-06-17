@@ -64,7 +64,7 @@ public class ReverseList {
 
     public static ListNode reverseListByRecursion(ListNode head){
 
-        // 递归出口
+        // 出口
         if (head == null || head.next == null){
             return head;
         }
